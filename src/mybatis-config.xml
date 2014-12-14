@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 读取配置在项目中的applications.properties 在项目启动的时候会替换掉这里配置的value值 -->
+	<properties resource="applications.properties">
+		<property name="jdbc.username" value="db_user" />
+		<property name="jdbc.password" value="verysecurepwd" />
+	</properties>
+	<!-- 为student添加别名 -->
+	<typeAliases>
+		<typeAlias type="com.tHero.domain.Teacher" alias="teacher"/>
+		<typeAlias type="com.tHero.domain.Student" alias="student"/>
+		<!-- 如果配置了package mybatis会自动扫描该包下的所有类，然后自动创建别名  -->
+		<!-- <package name=""/>  -->
+	</typeAliases>
+	<!-- <typeHandlers>
+		<typeHandler  handler="com.mybatis3.typehandlers.PhoneTypeHandler"/>
+	</typeHandlers> -->
+	
+	<!-- 配置 development default是默认启用的数据库连接环境，当配置多个连接信息的时候，创建MyBatisSqlSessionFactory 会自动的选择默认值
+		如：
+			inputStream = Resources.getResourceAsStream("mybatis-config.xml");
+			defaultSqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+			cartSqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStre
+				am, "shoppingcart");//第一个参数表示读取mabatis配置文件位置第二个配置表示读取的数据源，解释见@
+	-->
+
+	<mappers>
+		<mapper resource="com/tHero/mapper/StudentMapper.xml"/>
+		<mapper resource="com/tHero/mapper/TeacherMapper.xml"/>
+	</mappers>
+</configuration>

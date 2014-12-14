@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.abc.mapper.StudentMapper">
+	<resultMap type="com.tHero.domain.Student" id="StudentResultMap">
+		<id property="id" column="id"/>
+		<result property="name" column="s_name"/>
+		<result property="gender" column="gender"/>
+		<result property="major" column="major"/>
+		<result property="grade" column="grade"/>
+		<association property="supervisor" resultMap="com.abc.mapper.TeacherMapper.supervisorResultMap">
+		</association>
+	</resultMap>
+	<select id="getById" parameterType="int" resultMap="StudentResultMap">
+		select * from student where id = #{id}
+	</select>
+	<!-- #name 中那么大小写敏感 useGeneratedKeys设置为true是由数据库自动生成逐渐  keyProperty 指定把获得到的主键值注入
+	到Student的id属性-->
+	<insert id="add" parameterType="com.tHero.domain.Student" useGeneratedKeys="true" keyProperty="id">
+		insert into student(name,gender,major,grade) values(#{name},#{gender},#{major},#{grade})
+	</insert>
+	<update id="update" parameterType="com.tHero.domain.Student" >
+		update student set gender = #{gender} where id= #{id}
+	</update>
+	<!-- org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.abc.mapper.StudentMapper.delete
+			如果id和Mapper不匹配的话会抛出上述的错误
+	-->
+	<delete id="delete" parameterType="com.tHero.domain.Student">
+		delete from student where id = #{id}
+	</delete>
+	
+	<select id="getStudnetAndTeacher" parameterType="int"   resultMap="StudentResultMap">
+		select * from student s ,teacher t where s.supervisor_id = t.id and s.id = #{id}
+	</select>	
+	<insert id="addStudent" parameterType="com.tHero.domain.Student" useGeneratedKeys="true" keyProperty="id">
+		insert into student(name,gender,major,grade,supervisor_id)
+		values(#{name},#{gender},#{major},#{grade},#{supervisor.id})
+	</insert>
+</mapper>
+
+
+
+  
