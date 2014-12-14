@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.abc.mapper.StudentMapper">
+<mapper namespace="com.tHero.mapper.StudentMapper">
 	<resultMap type="com.tHero.domain.Student" id="StudentResultMap">
 		<id property="id" column="id"/>
 		<result property="name" column="s_name"/>
 		<result property="gender" column="gender"/>
 		<result property="major" column="major"/>
 		<result property="grade" column="grade"/>
-		<association property="supervisor" resultMap="com.abc.mapper.TeacherMapper.supervisorResultMap">
+		<association property="supervisor" resultMap="com.tHero.mapper.TeacherMapper.supervisorResultMap">
 		</association>
 	</resultMap>
 	<select id="getById" parameterType="int" resultMap="StudentResultMap">

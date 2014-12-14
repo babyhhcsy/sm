@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.abc.mapper.TeacherMapper">
+<mapper namespace="com.tHero.mapper.TeacherMapper">
 	<resultMap type="teacher" id="supervisorResultMap">
 		<id property="id" column="oid"/>
 		<result property="name" column="name"/>
 		<result property="gender" column="gender"/>
 		<result property="researchArea" column="research_area"/>
 		<result property="title" column="title"/>
-		<collection property="supStudent" resultMap="com.abc.mapper.StudentMapper.StudentResultMap"></collection>
+		<collection property="supStudent" resultMap="com.tHero.mapper.StudentMapper.StudentResultMap"></collection>
 	</resultMap>
 	<select id="getById" parameterType="int" resultMap="supervisorResultMap">
 		select t.id as oid ,t.name,t.gender,t.research_area,t.title,s.id,s.name as s_name,s.gender,s.major,s.grade,s.supervisor_id from student s , teacher t where s.supervisor_id = t.id
