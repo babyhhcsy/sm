@@ -2,9 +2,10 @@ package com.tHero.mapper;
 
 import java.util.List;
 
+import com.tHero.annotation.MyBatisRepository;
 import com.tHero.domain.Student;
 
-
+@MyBatisRepository
 public interface StudentMapper {
 	public Student getById(int id);
 	public int add(Student student);

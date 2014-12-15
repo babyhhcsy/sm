@@ -60,9 +60,5 @@
 		</environment>
 	</environments>
 
-	<mappers>
-		<mapper resource="com/tHero/mapper/StudentMapper.xml" />
-		<mapper resource="com/github/pagehelper/mapper/CountryMapper.xml" />
-	</mappers>
 
 </configuration>
