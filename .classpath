@@ -32,7 +32,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsqlparser-0.9.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/junit-4.7.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maven-artifact-2.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maven-artifact-manager-2.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maven-model-2.0.jar"/>
@@ -40,7 +39,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maven-profile-2.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maven-project-2.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maven-repository-metadata-2.0.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mybatis-3.1.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mybatis-spring-1.1.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.21.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/native2ascii-maven-plugin-1.0-beta-1.jar"/>
@@ -51,8 +49,6 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/shiro-core-1.2.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/shiro-spring-1.2.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/shiro-web-1.2.0.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-aop-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-asm-3.1.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-beans-3.1.0.RELEASE.jar"/>
@@ -69,5 +65,12 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/wagon-provider-api-1.0-alpha-5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/babycsy/.m2/repository/org/mybatis/mybatis/3.2.6/mybatis-3.2.6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/pagehelper-3.3.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jna-3.3.0-platform.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jna-3.3.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/slf4j-log4j12-1.7.6.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

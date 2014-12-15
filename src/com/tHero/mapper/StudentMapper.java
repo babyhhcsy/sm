@@ -1,5 +1,7 @@
 package com.tHero.mapper;
 
+import java.util.List;
+
 import com.tHero.domain.Student;
 
 
@@ -11,4 +13,5 @@ public interface StudentMapper {
 	public Student getStudnetAndTeacher(int id);
 	public Student selectSupervisor(int id);
 	public int addStudent(Student student);
+	public List<Student> queryAll();
 }	

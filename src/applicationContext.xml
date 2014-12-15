@@ -11,26 +11,15 @@
                 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd  
                 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
                 http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd">  
-  <!-- 配置访问的路径 -->
-  <bean name="/test1/helloworld" class="com.tHero.server.loginController">
-  <!-- 配置Controller的多个方法访问 -->
-  </bean>
-  <bean name="/test2/helloworld" class="com.tHero.test.TestInsertStudent"></bean>
-  <bean name="/test3/SpringTransaction" class="com.tHero.test.SpringTransaction"></bean>
-  <bean name="/test4/mutiMapperMybatis" class="com.tHero.server.mutiMapperMybatisController"></bean>
+
+  <context:component-scan base-package="com.tHero"></context:component-scan>
+  <mvc:annotation-driven></mvc:annotation-driven>
   <!-- 添加支持Controller的多个方法的支持文件 paramName请求的方式 -->
   <bean id="parameterMethodResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
   		<property name="paramName" value="action"></property>
   </bean>
-<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
-        <property name="exceptionMappings">  
-            <props>  
-                <prop key="org.springframework.web.servlet.PageNotFound">error/pageNotFound</prop>  
-                <prop key="org.springframework.dao.DataAccessException">error/dataAccessFailure</prop>  
-                <prop key="org.springframework.transaction.TransactionException">error/dataAccessFailure</prop>  
-            </props>  
-        </property>  
-    </bean>   -->    
+   <mvc:resources location="/image/" mapping="/image/**"/>
+  	<mvc:resources location="/js/" mapping="/js/**"/>
     <!-- 配置spring的拦截功能view层 -->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     	<property name="prefix" value="/"></property>

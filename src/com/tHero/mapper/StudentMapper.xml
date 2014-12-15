@@ -7,8 +7,6 @@
 		<result property="gender" column="gender"/>
 		<result property="major" column="major"/>
 		<result property="grade" column="grade"/>
-		<association property="supervisor" resultMap="com.tHero.mapper.TeacherMapper.supervisorResultMap">
-		</association>
 	</resultMap>
 	<select id="getById" parameterType="int" resultMap="StudentResultMap">
 		select * from student where id = #{id}
@@ -35,6 +33,9 @@
 		insert into student(name,gender,major,grade,supervisor_id)
 		values(#{name},#{gender},#{major},#{grade},#{supervisor.id})
 	</insert>
+	<select id="queryAll" resultMap="StudentResultMap">
+		select * from student
+	</select>
 </mapper>
 
 
